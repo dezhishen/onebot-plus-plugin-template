@@ -20,6 +20,11 @@ export GOOS=linux
 go build -o ./plugins/${plugin_name}-linux-arm64v7 ./main.go
 
 export GOARCH=amd64
-export GOOS=darwin
+export GOOS=linux
 go build -o ./plugins/${plugin_name}-linux-amd64 ./main.go
+
+
+export GOARCH=amd64
+export GOOS=darwin
+go build -o ./plugins/${plugin_name}-darwin-amd64 ./main.go
 
